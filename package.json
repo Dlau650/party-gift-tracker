@@ -1,0 +1,24 @@
+{
+  "name": "gift-tracker-pwa",
+  "version": "1.0.0",
+  "description": "Voice-powered gift tracking PWA for parties",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx http-server public -p 3000 -o",
+    "build": "echo 'No build step needed - static files ready'",
+    "deploy": "echo 'Deploy the public folder to your hosting service'"
+  },
+  "keywords": [
+    "pwa",
+    "gift",
+    "tracker",
+    "voice",
+    "party"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
