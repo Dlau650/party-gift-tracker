@@ -92,32 +92,8 @@
   }
   
   setIsProcessing(false);
-};
+};  
 
-          const data = await response.json();
-          let responseText = data.content[0].text.trim();
-          responseText = responseText.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-          
-          const parsed = JSON.parse(responseText);
-
-          setGifts(prev => [{
-            id: Date.now(),
-            gifter: parsed.gifter,
-            gift: parsed.gift,
-            timestamp: new Date().toISOString()
-          }, ...prev]);
-        } catch (error) {
-          console.error('Error parsing:', error);
-          setGifts(prev => [{
-            id: Date.now(),
-            gifter: 'Unknown',
-            gift: text,
-            timestamp: new Date().toISOString()
-          }, ...prev]);
-        }
-        
-        setIsProcessing(false);
-      };
 
       const startRec = () => {
         if (recognition) {
@@ -198,8 +174,8 @@
           )
         )
       );
+      
     }
-
     ReactDOM.createRoot(document.getElementById('root')).render(e(App));
   </script>
 </body>
